@@ -10,6 +10,8 @@ import './Audiences.scss'
 
 const Audiences = () => {
 	const [attributes, setAttributes] = useState<Record<string, any>>([])
+	const [pageCount, setPageCount] = useState(1)
+	const [pageItems, setPageItems] = useState<UserEntity[]>([])
 	const dispatch = useDispatch()
 	const { selectedUserEntity, data } = useTypedSelector(
 		state => state.userEntities,
@@ -24,6 +26,10 @@ const Audiences = () => {
 			setAttributes(Object.entries(selectedUserEntity.attributes))
 		}
 	}, [selectedUserEntity])
+
+	useEffect(() => {
+		setPageItems([...data.slice(0, 50)])
+	}, [data])
 
 	const handleUserSelect = (user: UserEntity) => {
 		dispatch(actionCreators.selectUserEntity(user))
@@ -43,10 +49,24 @@ const Audiences = () => {
 		return `${month} ${day}, ${year}, ${time} - ${location}`
 	}
 
+	const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+		if (
+			e.currentTarget.scrollTop >=
+			e.currentTarget.scrollHeight - e.currentTarget.clientHeight - 1000
+		) {
+			if (pageCount * 50 >= data.length) return
+			setPageCount(prevState => prevState + 1)
+			setPageItems(prevState => [
+				...prevState,
+				...data.slice(pageCount * 50, (pageCount + 1) * 50),
+			])
+		}
+	}
+
 	return (
 		<div>
-			<SideMenu>
-				{data.map(item => (
+			<SideMenu onScroll={handleScroll}>
+				{pageItems.map((item: UserEntity) => (
 					<SideMenu.SideMenuItem
 						key={item.id}
 						user={item}
