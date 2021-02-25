@@ -15,6 +15,8 @@ const Audiences = () => {
 		state => state.userEntities,
 	)
 
+	console.log(JSON.stringify(data))
+
 	useEffect(() => {
 		dispatch(actionCreators.getUserEntities())
 	}, [dispatch])

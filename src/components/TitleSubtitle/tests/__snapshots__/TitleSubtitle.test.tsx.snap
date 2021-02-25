@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleSubtitle Sanity checks for TitleSubtitle matches the snapshot 1`] = `"<div><h2 data-test=\\"title\\" class=\\"title\\">test title</h2><span data-test=\\"subtitle\\" class=\\"subtitle\\">test content</span></div>"`;

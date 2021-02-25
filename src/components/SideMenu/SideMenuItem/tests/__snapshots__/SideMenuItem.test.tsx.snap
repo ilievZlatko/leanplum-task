@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideMenuItem Sanity checks for SideMenuItem matches the snapshot 1`] = `"<aside class=\\"menu-item\\" data-test=\\"menu-item\\"><div><h2 data-test=\\"title\\" class=\\"title\\">usr_0</h2><span data-test=\\"subtitle\\" class=\\"subtitle\\"><span>1 Devices - </span><span>2 Sessions - </span><span>Sofia</span></span></div></aside>"`;

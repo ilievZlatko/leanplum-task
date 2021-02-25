@@ -16,6 +16,7 @@ const SideMenuItem: React.FC<Props> = ({ user, active, onClick }) => {
 				.join(' ')
 				.trim()}
 			onClick={() => onClick(user)}
+			data-test='menu-item'
 		>
 			<TitleSubtitle
 				title={user.id}

@@ -5,11 +5,15 @@ interface Props {
 	subtitle: string | React.ReactNode
 }
 
-const TitleSubtitle: React.FC<Props> = ({ title, subtitle }) => {
+const TitleSubtitle: React.FC<Props> = ({ title, subtitle, ...otherProps }) => {
 	return (
-		<div>
-			<h2 className='title'>{title}</h2>
-			<span className='subtitle'>{subtitle}</span>
+		<div {...otherProps}>
+			<h2 data-test='title' className='title'>
+				{title}
+			</h2>
+			<span data-test='subtitle' className='subtitle'>
+				{subtitle}
+			</span>
 		</div>
 	)
 }

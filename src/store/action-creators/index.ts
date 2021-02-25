@@ -17,9 +17,8 @@ export const getUserEntities = () => (dispatch: Dispatch<Action>) => {
 
 export const selectUserEntity = (user: UserEntity) => (
 	dispatch: Dispatch<Action>,
-) => {
+) =>
 	dispatch({
 		type: ActionType.SELECT_USER_ENTITY,
 		payload: user,
 	})
-}

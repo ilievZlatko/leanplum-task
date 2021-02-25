@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoCard Sanity checks for InfoCard matches the snapshot 1`] = `"<div class=\\"info-card\\"><h2 data-test=\\"info-card-title\\" class=\\"info-card__title\\">test title</h2><div data-test=\\"info-card-content\\" class=\\"info-card__content\\">test content</div></div>"`;

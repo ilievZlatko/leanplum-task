@@ -1,0 +1,22 @@
+{
+	"roots": ["<rootDir>/src"],
+	"transform": {
+		"^.+\\.tsx?$": "ts-jest"
+	},
+	"testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.tsx?$",
+	"moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+	"collectCoverageFrom": [
+		"src/**/*.{js,jsx,ts,tsx}",
+		"!<rootDir>/node_modules/",
+		"!src/core/**/*.{ts, tsx}"
+	],
+	"coverageThreshold": {
+		"global": {
+			"branches": 90,
+			"functions": 90,
+			"lines": 90,
+			"statements": 90
+		}
+	},
+	"reporters": ["default", "jest-junit"]
+}
