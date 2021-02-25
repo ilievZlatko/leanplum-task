@@ -20,7 +20,7 @@ If you decide to use this sample project, here are a few tips:
 
 Create a page that looks like the image below.
 
-![Audiences page](./task-audiences.png)
+![Audiences page](./src/assets/task-audiences.png)
 
 ### Requirements
 
