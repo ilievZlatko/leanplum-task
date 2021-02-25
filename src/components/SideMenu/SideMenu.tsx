@@ -6,9 +6,10 @@ import './SideMenu.scss'
 
 interface Props {
 	children: React.ReactNode
+	onScroll?: (event: React.UIEvent<HTMLDivElement>) => void
 }
 
-const SideMenu = ({ children, ...otherProps }: Props) => {
+const SideMenu = ({ children, onScroll, ...otherProps }: Props) => {
 	const count = Children.count(children)
 
 	return (
@@ -20,7 +21,7 @@ const SideMenu = ({ children, ...otherProps }: Props) => {
 				/>
 			</div>
 
-			<div className='side-menu__items-container'>
+			<div className='side-menu__items-container' onScroll={onScroll}>
 				{React.Children.map(children, child => {
 					if (!child)
 						throw new Error(
