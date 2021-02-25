@@ -1,0 +1,54 @@
+@import '../../styles/mixins';
+@import '../../styles/spacings';
+@import '../../styles/colors';
+@import '../../styles/spacings';
+
+.audience-content-container {
+	background-color: white;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: calc(100% - 500px);
+	overflow-y: auto;
+	@include shadow;
+	padding: $space-xl;
+}
+
+.audience-cards-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: $space-xl;
+	margin-top: 50px;
+	justify-content: space-between;
+}
+
+.audience-table-container {
+	margin-top: 50px;
+	width: 100%;
+
+	table {
+		width: 100%;
+		display: table;
+		border-collapse: separate;
+		border-spacing: 2px;
+	}
+
+	thead {
+		text-align: left;
+		color: $color-subtitle;
+	}
+
+	td,
+	th {
+		display: table-cell;
+		vertical-align: inherit;
+		padding: $space-lg;
+	}
+
+	td {
+		border-bottom: 1px solid $color-table-header;
+		border-top: 1px solid $color-table-header;
+		font-weight: bold;
+	}
+}

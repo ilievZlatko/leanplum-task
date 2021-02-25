@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+@import '../../styles/fontSizes';
+@import '../../styles/mixins';
+
+.info-card {
+	background-color: $color-title-bg;
+	@include border-radius;
+	padding: $space-xl;
+
+	&__title {
+		color: $color-subtitle;
+		margin-bottom: $space-xl;
+	}
+
+	&__content {
+		color: $color-dark-text;
+		font-size: 28px;
+		font-weight: bold;
+	}
+}

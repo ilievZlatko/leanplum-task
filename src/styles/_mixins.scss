@@ -1,0 +1,8 @@
+/* Border Radius */
+@mixin border-radius {
+	border-radius: 4px;
+}
+
+@mixin shadow {
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+}

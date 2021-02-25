@@ -1,0 +1,15 @@
+@import '../../../styles/spacings';
+@import '../../../styles/colors';
+@import '../../../styles/mixins';
+
+.menu-item {
+	padding: $space-lg;
+	border: 2px solid transparent;
+	@include border-radius;
+	cursor: pointer;
+	user-select: none;
+
+	&__active {
+		border: 2px solid $color-dark-text;
+	}
+}
