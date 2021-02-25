@@ -16,7 +16,6 @@ If you decide to use this sample project, here are a few tips:
 
 - To lint and fix style issues, use `yarn lint`.
 
-
 # Project specification
 
 Create a page that looks like the image below.
@@ -32,7 +31,6 @@ Create a page that looks like the image below.
 - Bind the list to the sample data provided in `src/models/UsersEntity.ts`.
 
 - Selecting an item from the list should display its details in the details view.
-
 
 ### Styling
 
@@ -64,3 +62,11 @@ Our design system uses `4px`, `8px`, `16px`, or `24px`.
 Border radius is `4px`.
 
 Box shadow: `0 8px 20px 0 rgba(0,0,0,0.05)`
+
+### To run the app and see it in action:
+
+- staret script
+  `npm start` or `yarn start`
+
+- to run the tests
+  `npm run test` or `yarn test`
